@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Slide Show -->
+     <section>
+        <img class="mySlides" src="doogy.jpeg" style="height:500px;">
+        <img class="mySlides" src="flower.jpeg" style="height:500px;">
+        <img class="mySlides" src="planty.jpg" style="height:500px;">
+        <img class="mySlides" src="childhood gng ngl.png" style="height:500px;">
+        <img class="mySlides" src="sunset.jpeg" style="height:500px;">
+     </section>
+     <script>
+        // Automatic Slideshow - chnage image every 3 seconds 
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+     </script>
+</body>
+</html>
